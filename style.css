@@ -22,29 +22,65 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  cursor: pointer;
-  transition: opacity .6s ease;
+  transition: opacity .8s ease;
 }
 
 .start-content {
   text-align: center;
+}
+
+/* =====================
+   FOTO DO CASAL (SEM CORAÇÃO)
+===================== */
+.heart {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  cursor: pointer;
   animation: pulse 1.8s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.start-content h1 {
-  font-size: 4rem;
-  margin-bottom: 10px;
+/* REMOVE FORMATO DE CORAÇÃO */
+.heart::before,
+.heart::after {
+  display: none;
 }
 
-.start-content p {
-  font-size: 1.2rem;
-  opacity: .9;
+/* FOTO */
+.heart img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 15px 35px rgba(0,0,0,.3);
 }
 
+/* ANIMAÇÃO */
 @keyframes pulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.08); }
+  50% { transform: scale(1.06); }
   100% { transform: scale(1); }
+}
+
+/* TEXTO CLIQUE AQUI */
+.clique-texto {
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.seta {
+  display: block;
+  animation: subirDescer 1.2s infinite;
+}
+
+@keyframes subirDescer {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 /* =====================
@@ -175,21 +211,30 @@ footer {
 }
 
 /* =====================
-   CORAÇÕES (opcional)
+   CAMADA DE CORAÇÕES
 ===================== */
-.heart {
+#heart-layer {
   position: fixed;
-  bottom: -10px;
-  animation: floatUp 6s linear infinite;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10000;
+  overflow: hidden;
 }
 
-@keyframes floatUp {
-  from {
-    transform: translateY(0);
+.heart-fly {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  animation: flyHeart 2.5s ease-out forwards;
+}
+
+@keyframes flyHeart {
+  0% {
+    transform: scale(0.4) translateY(0);
     opacity: 1;
   }
-  to {
-    transform: translateY(-110vh);
+  100% {
+    transform: scale(1.6) translateY(-250px);
     opacity: 0;
   }
 }
