@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Para o Amor da Minha Vida ❤️</title>
 
-  <!-- Fonte -->
+  <!-- FONTES -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- CSS -->
@@ -13,78 +13,89 @@
 </head>
 <body>
 
-<!-- TELA INICIAL -->
-<!-- TELA INICIAL -->
-<div id="start-screen">
-  <div class="start-content">
+  <!-- CAMADA DOS CORAÇÕES -->
+  <div id="heart-layer"></div>
 
-    <div class="heart-container" id="enter-site">
-      <div class="heart">
-        <img src="foto4.png" alt="Foto do casal">
-      </div>
+  <!-- =====================
+       TELA INICIAL
+  ====================== -->
+  <div id="start-screen">
+    <div class="start-content">
+
+      <!-- FOTO DO CASAL (CLICÁVEL) -->
+      <img src="foto4.png" id="foto-casal" alt="Foto do casal ❤️">
+
+      <!-- TEXTO -->
+      <p class="click-text">⬆ Clique aqui</p>
+
     </div>
-
-    <p class="click-text">⬆ Clique aqui</p>
-
   </div>
-</div>
 
+  <!-- =====================
+       MÚSICA
+  ====================== -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
 
-<!-- MÚSICA (SEM CONTROLS VISÍVEIS) -->
-<audio id="bg-music" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
+  <!-- BOTÃO DA MÚSICA -->
+  <button id="music-btn">🎵</button>
 
-<!-- BOTÃO DA MÚSICA -->
-<button id="music-btn">🎵</button>
+  <!-- =====================
+       CONTEÚDO DO SITE
+  ====================== -->
+  <header>
+    <div>
+      <h1>Para Você, Meu Amor ❤️</h1>
+      <p>
+        Tudo aqui é simples,<br>
+        mas o sentimento por você<br>
+        é infinito.
+      </p>
+      <a href="#historia" class="btn">Nossa História</a>
+    </div>
+  </header>
 
-<!-- CONTEÚDO DO SITE -->
-<header>
-  <div>
-    <h1>Para Você, Meu Amor ❤️</h1>
+  <section id="historia">
+    <h2>Nossa História</h2>
     <p>
-      Tudo aqui é simples,<br>
-      mas o sentimento por você<br>
-      é infinito.
+      Desde o dia em que você entrou na minha vida, tudo ganhou um novo sentido.<br><br>
+      O que antes era comum se transformou em especial, e cada momento ao seu lado passou a ter mais valor.<br><br>
+      Nossa história é feita de risos sinceros, conversas sem hora para acabar e pequenos gestos que dizem muito.
+      É no seu abraço que encontro paz, é no seu sorriso que encontro força.<br><br>
+      Estar com você é o meu lugar favorito no mundo, e viver essa história ao seu lado é o melhor capítulo da minha vida. ❤️
     </p>
-    <a href="#historia" class="btn">Nossa História</a>
-  </div>
-</header>
+  </section>
 
-<section id="historia">
-  <h2>Nossa História</h2>
-  <p>
-    Desde o dia em que você entrou na minha vida, tudo ganhou um novo sentido.<br><br>
-    O que antes era comum se transformou em especial, e cada momento ao seu lado passou a ter mais valor.<br><br>
-    Nossa história é feita de risos sinceros, conversas sem hora para acabar e pequenos gestos que dizem muito.
-    É no seu abraço que encontro paz, é no seu sorriso que encontro força.<br><br>
-    Estar com você é o meu lugar favorito no mundo, e viver essa história ao seu lado é o melhor capítulo da minha vida. ❤️
-  </p>
-</section>
+  <section>
+    <h2>Momentos Inesquecíveis</h2>
+    <p>Alguns momentos que guardo para sempre no coração.</p>
 
-<section>
-  <h2>Momentos Inesquecíveis</h2>
-  <p>Alguns momentos que guardo para sempre no coração.</p>
+    <div class="gallery">
+      <img src="foto1.png" alt="">
+      <img src="foto2.png" alt="">
+      <img src="foto3.png" alt="">
+    </div>
+  </section>
 
-  <div class="gallery">
-    <img src="foto1.png">
-    <img src="foto2.png">
-    <img src="foto3.png">
-  </div>
-</section>
+  <section>
+    <h2>Uma Mensagem Para Você</h2>
+    <div class="message-box">
+      <p>
+        Desde que você entrou na minha vida, tudo ganhou mais cor, mais sentido e mais amor.<br><br>
+        Cada sorriso seu ilumina meus dias, e cada momento ao seu lado se torna inesquecível.<br><br>
+        Você é o meu lugar seguro, meu melhor sonho e a pessoa que eu quero escolher todos os dias.<br><br>
+        Eu te amo mais do que palavras conseguem explicar. ❤️
+      </p>
+    </div>
+  </section>
 
-<section>
-  <h2>Uma Mensagem Para Você</h2>
-  <div class="message-box">
-    <p>
-      Desde que você entrou na minha vida, tudo ganhou mais cor, mais sentido e mais amor.<br><br>
-      Cada sorriso seu ilumina meus dias, e cada momento ao seu lado se torna inesquecível.<br><br>
-      Você é o meu lugar seguro, meu melhor sonho e a pessoa que eu quero escolher todos os dias.<br><br>
-      Eu te amo mais do que palavras conseguem explicar. ❤️
-    </p>
-  </div>
-</section>
+  <footer>
+    Feito com amor 💕 especialmente para você.
+  </footer>
 
-<footer>
-  Feito com amor 💕 especialmente para você.
-</footer>
+  <!-- JS (EXTERNO, OBRIGATÓRIO) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
